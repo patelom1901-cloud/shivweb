@@ -1,0 +1,89 @@
+/* ===== Global Body Styling ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* ===== Header Styling ===== */
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* ===== Product Section Layout ===== */
+.product-details {
+  padding: 30px;
+}
+
+.product-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  animation: slide-in 1s ease-in-out;
+}
+
+.product-section section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-section section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Headings & Images ===== */
+.product-section h2 {
+  font-size: 1.2rem;
+  color: #005bbb;
+  margin-bottom: 10px;
+}
+
+.product-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ===== List Styling ===== */
+.product-section p,
+.product-section ul {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.product-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* ===== Animation on Load ===== */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

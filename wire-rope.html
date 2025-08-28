@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wire Rope - Shiv Shakti Industries</title>
+  <link rel="stylesheet" href="wire-rope.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 class="product-title">Wire Rope</h1>
+      <p class="product-subtitle">Premium Quality Wire Ropes for Industrial Applications</p>
+    </div>
+  </header>
+
+    <div class="product-section">
+      <section class="product-card" id="galvanized">
+        <div class="card-header">
+          <h2>Galvanized Small Wire Rope</h2>
+          <div class="icon"><i class="fas fa-link"></i></div>
+        </div>
+        <div class="image-container">
+          <img src="images/galwenize 3mm wirerope.jpeg" alt="Galvanized Wire Rope" />
+        </div>
+        <div class="card-content">
+          <ul>
+            <li><i class="fas fa-cog"></i> Wire Construction: 7x7</li>
+            <li><i class="fas fa-ruler"></i> Diameter: 3mm, 4.8mm</li>
+            <li><i class="fas fa-shield-alt"></i> Corrosion Resistant</li>
+            <li><i class="fas fa-check-circle"></i> High Tensile Strength</li>
+          </ul>
+        </div>
+        <button class="inquiry-btn">Send Inquiry</button>
+      </section>
+
+      <section class="product-card" id="ungalvanized">
+        <div class="card-header">
+          <h2>Ungalvanized Wire Rope</h2>
+          <div class="icon"><i class="fas fa-unlink"></i></div>
+        </div>
+        <div class="image-container">
+          <img src="images/ungelwenize wire rope.jpeg" alt="Ungalvanized Wire Rope" />
+        </div>
+        <div class="card-content">
+          <ul>
+            <li><i class="fas fa-cog"></i> Wire Construction: 6x19</li>
+            <li><i class="fas fa-ruler"></i> Diameter: 8mm, 10mm</li>
+            <li><i class="fas fa-bolt"></i> Excellent Flexibility</li>
+            <li><i class="fas fa-weight-hanging"></i> High Load Capacity</li>
+          </ul>
+        </div>
+        <button class="inquiry-btn">Send Inquiry</button>
+      </section>
+
+      <section class="product-card" id="multi-size">
+        <div class="card-header">
+          <h2>Multi-Size Wire Rope</h2>
+          <div class="icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="image-container">
+          <img src="images/multi size wirerope.jpeg" alt="Multi-Size Wire Rope" />
+        </div>
+        <div class="card-content">
+          <ul>
+            <li><i class="fas fa-tools"></i> Used In: Crane, Borwell, Elevator etc.</li>
+            <li><i class="fas fa-cog"></i> Wire Construction: 6x25, 6x31, 6x36</li>
+            <li><i class="fas fa-ruler"></i> Diameter: 12mm, 16mm, 18mm, 20mm</li>
+            <li><i class="fas fa-industry"></i> Industrial Grade</li>
+          </ul>
+        </div>
+        <button class="inquiry-btn">Send Inquiry</button>
+      </section>
+    </div>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Address: Your Company Address</p>
+          <p><i class="fas fa-phone"></i> Phone: +91-XXXXX-XXXXX</p>
+          <p><i class="fas fa-envelope"></i> Email: info@shivshaktiindustries.com</p>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Shiv Shakti Industries. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple animation for product cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.product-card');
+      
+      cards.forEach((card, index) => {
+        // Apply staggered animation
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        // Add hover effect
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+      
+      // Inquiry button functionality
+      const inquiryBtns = document.querySelectorAll('.inquiry-btn');
+      inquiryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const productName = this.parentElement.querySelector('h2').textContent;
+          alert(`Inquiry sent for ${productName}. We will contact you shortly!`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
